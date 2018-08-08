@@ -4,10 +4,10 @@ class UI {
         this.desc = document.getElementById('w-desc');
         this.string = document.getElementById('w-string');
         this.details = document.getElementById('w-details');
-        this.icon = document.getElementById('w-icon');
+        // this.icon = document.getElementById('w-icon');
         this.humidity = document.getElementById('w-humidity');
-        this.feelsLike = document.getElementById('w-feelsLike');
-        this.dewpoint = document.getElementById('w-dewpoint');
+        this.minTemp = document.getElementById('w-min-temp');
+        this.maxTemp = document.getElementById('w-max-temp');
         this.wind = document.getElementById('w-wind');
     }
 
@@ -16,5 +16,10 @@ class UI {
         this.location.textContent = `${weather.name}, ${weather.sys.country}`;
         this.desc.textContent = weather.weather[0].description;
         this.string.textContent = weather.main.temp;
+        this.humidity.textContent = `Relative Humidity: ${weather.main.humidity}`;
+        this.minTemp.textContent = `Minimum Temperature: ${weather.main.temp_min}`;
+        this.maxTemp.textContent = `Maximum Temperature: ${weather.main.temp_max}`;
+        this.wind.textContent = `Wind Speed: ${weather.wind.speed}`;
     }
+
 }

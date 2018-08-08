@@ -1,7 +1,7 @@
 // Initialize weather object
-const weather = new Weather('London');
+const weather = new Weather('Bucharest');
 const ui = new UI();
-
+const description = document.getElementById('w-desc');
 
 const getWeather = () => { 
     weather.getWeather()
@@ -19,14 +19,16 @@ document.addEventListener('DOMContentLoaded', getWeather);
 
 
 
-
-
-
-
-
-
-
-
+// BG Depending on weather conditions
+const bgSet = () => {
+    const desc = description.textContent.toString();
+    // const check = /cloud/i;
+    if(/cloud/i.test(desc)){
+        document.body.style.backgroundImage = "url('https://img.freepik.com/free-photo/black-rain-abstract-dark-power_1127-2380.jpg?size=338&ext=jpg')"; 
+        console.log('yes')
+    }
+}
+setTimeout(bgSet,2000); 
 
 
 
