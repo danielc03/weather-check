@@ -2,6 +2,7 @@
 const weather = new Weather('Cambridge');
 const ui = new UI();
 const description = document.getElementById('w-desc');
+const body = document.getElementsByTagName('BODY')[0];
 
 const getWeather = () => { 
     weather.getWeather()
@@ -20,20 +21,26 @@ document.addEventListener('DOMContentLoaded', getWeather);
 
 
 // BG Depending on weather conditions
-// const bgSet = () => {
-//     const desc = description.textContent.toString();
-//     // const check = /cloud/i;
-//     if(/cloud/i.test(desc)){
-//         document.body.style.backgroundImage = "url('https://img.freepik.com/free-photo/black-rain-abstract-dark-power_1127-2380.jpg?size=338&ext=jpg')"; 
-//         console.log('yes')
-//     }
-// }
-// setTimeout(bgSet,2000); 
+const bgSet = () => {
+    const desc = description.textContent.toString();
+    // const check = /cloud/i;
+    if(/clouds/i.test(desc)){
+        body.classList.add("clouds"); 
+    } else if(/rain/i.test(desc)){
+        body.classList.add("rain"); 
+    } else if(/snow/i.test(desc) || /sleet/i.test(desc)){
+        body.classList.add("snow"); 
+    } else if(/drizzle/i.test(desc)){
+        body.classList.add("drizzle"); 
+    } else if(/thunderstorm/i.test(desc)){
+        body.classList.add("thunderstorm"); 
+    } else if(/clear/i.test(desc)){
+        body.classList.add("clear"); 
+    } else {
+        body.classList.add("fog")
+    }
+};
+setTimeout(bgSet,2000); 
 
 
 
-// Farenheight to celsius converter
-// function toCelsius(f) {
-//     return (5/9) * (f-32);
-// }
-// document.getElementById("demo").innerHTML = toCelsius(77);

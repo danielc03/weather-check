@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    height: 100%;
+}
+
+body { 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.clouds {
+    background-image: url('https://www.publicdomainpictures.net/pictures/260000/velka/cloudy-background.jpg')
+}
+.rain {
+    background-image: url("https://i.ytimg.com/vi/cU5naff4pOQ/maxresdefault.jpg");
+}
+.snow {
+    background-image: url("https://images.wallpaperscraft.com/image/city_winter_europe_street_snow_shopping_59090_1920x1200.jpg");
+}
+.drizzle{
+    background-image: url("https://c1.staticflickr.com/8/7393/11375147803_0f453d8676_b.jpg");
+}   
+.thunderstorm{
+    background-image: url("https://static1.squarespace.com/static/51f73b44e4b0f58fade2cda9/t/59b50f0112abd93aa2b46427/1505038083499/storm_clouds_lightning_dark_landscape-591258.jpg%21d.jpeg?format=1000w");
+}
+.clear{
+    background-image: url("https://images.unsplash.com/photo-1501682855625-15c985cd12a5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=24786866cf6aa9009096c706f1fd3454&w=1000&q=80");
+}
+.fog {
+    background-image: url("https://cdn-images-1.medium.com/max/2000/1*e8y2jeBaZOgfYlSfz9FL5w.jpeg");
+}
