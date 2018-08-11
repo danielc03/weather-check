@@ -27,24 +27,24 @@ const bgSet = () => {
     // Changing body class depending on weather
     const check = () => {
     if(/clouds/i.test(desc)){
-        body.classList.add("clouds"); 
+        body.className = "clouds"; 
     } else if(/rain/i.test(desc)){
-        body.classList.add("rain"); 
+        body.className = "rain"; 
     } else if(/snow/i.test(desc) || /sleet/i.test(desc)){
-        body.classList.add("snow"); 
+        body.className = "snow"; 
     } else if(/drizzle/i.test(desc)){
-        body.classList.add("drizzle"); 
+        body.className = "drizzle"; 
     } else if(/thunderstorm/i.test(desc)){
-        body.classList.add("thunderstorm"); 
+        body.className = "thunderstorm"; 
     } else if(/clear/i.test(desc)){
-        body.classList.add("clear"); 
+        body.className = "clear"; 
     } else {
-        body.classList.add("fog")
+        body.className = "fog";
     }
 }
 check();    
 };
-setTimeout(bgSet,2000); 
+setTimeout(bgSet, 1000); 
 
 
 
@@ -56,7 +56,7 @@ document.getElementById('w-change-button').addEventListener('click', (e) => {
 
     // Get and display weather on location
     getWeather();
-    setTimeout(bgSet, 3000);
+    setTimeout(bgSet, 1000);
     // Close modal
     $('#locModal').modal('hide');
 })
